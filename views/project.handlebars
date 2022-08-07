@@ -9,9 +9,30 @@
       {{format_date date_created}}</p>
   </div>
 
-  <button class="btn btn-primary mt-10 projectBtn"> Add a comment</button>
+  <button class="btn btn-primary mt-10 projectBtn"> Add comment</button>
   {{#if logged_in}}
-    <button class="btn btn-primary mt-10 projectBtn"> Modify </button>
+    <button class="btn btn-primary mt-10 projectBtn"> Modify Post </button>
   {{/if}}
+  <form class="row customizedForm">
+    <div class="col-12">
+      <input
+        name="tipUsername"
+        id="tipUsername"
+        placeholder="Add your name"
+        value=""
+        class="form-input"
+      />
+    </div>
+    <div class="col-12">
+      <textarea
+        placeholder="Leave a comment"
+        for="post-comment"
+        class="form-input"
+        id="post-comment"
+        name="post-comment"
+        class="form-input w-100"
+      ></textarea>
 
+    </div>
+  </form>
 </div>

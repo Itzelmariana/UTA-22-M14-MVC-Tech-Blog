@@ -18,6 +18,14 @@ nav a {
 }
 
 /* Homepage styles*/
+.containerHomepage {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.containerHomepage2 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .titleHomepage {
   font-size: 30px;
   color: var(--primary-color);
@@ -72,4 +80,25 @@ nav a {
 .posts a:hover {
   text-decoration: none;
   color: rgb(70, 68, 68);
+}
+@media (max-width: 550px) {
+  .myhome {
+    display: none;
+  }
+  .myDelBtn {
+    padding: 10px !important;
+    width: 100% !important;
+  }
+  .profileContainer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* projectID page*/
+.customizedForm {
+  padding: 20px;
+  background-color: rgb(106, 201, 220, 0.3);
+  border-radius: 10px;
+  margin-top: 15px;
 }

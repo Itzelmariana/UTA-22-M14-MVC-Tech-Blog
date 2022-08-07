@@ -27,28 +27,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/post/:id", async (req, res) => {
-  try {
-    const projectData = await Project.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
-    const project = projectData.get({ plain: true });
-
-    res.render("post", {
-      ...project,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get("/project/:id", async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
