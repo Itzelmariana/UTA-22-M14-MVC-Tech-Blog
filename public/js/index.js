@@ -54,9 +54,14 @@ const createCard = (comment) => {
   commentContainer.appendChild(cardEl);
 };
 
+function getProjectId() {
+  return document.querySelector(".projectId").getAttribute("project-id");
+}
+
 // Get a list of existing comments from the server
-const getcomments = () =>
-  fetch("/api/comments", {
+const getcomments = () => {
+  const id = getProjectId();
+  return fetch(`/api/comments/${id}`, {
     method: "GET", // or 'PUT'
     headers: {
       "Content-Type": "application/json",
@@ -68,10 +73,13 @@ const getcomments = () =>
     .catch((error) => {
       console.error("Error:", error);
     });
+};
 
 // Post a new comment to the page
-const postcomment = (comment) =>
-  fetch("/api/comments", {
+const postcomment = (comment) => {
+  const id = getProjectId();
+
+  return fetch(`/api/comments/${id}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -79,13 +87,13 @@ const postcomment = (comment) =>
     body: JSON.stringify(comment),
   })
     .then((response) => response.json())
-    .then((data) => {
-      alert(data);
+    .then(() => {
       createCard(comment);
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+};
 
 // When the page loads, get all the comments
 getcomments().then((data) => data.forEach((comment) => createCard(comment)));

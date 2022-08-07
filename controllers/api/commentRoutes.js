@@ -7,9 +7,10 @@ const {
 } = require("../../utils/fsUtils");
 
 // GET Route for retrieving all the comments
-comments.get("/", (req, res) => {
+comments.get("/:id", (req, res) => {
+  const id = req.params.id;
   readFromFile("./seeds/commentsData.json").then((data) =>
-    res.json(JSON.parse(data))
+    res.json(JSON.parse(data).filter((item) => item.project_id == id))
   );
 });
 
@@ -27,7 +28,9 @@ comments.get("/:comment_id", (req, res) => {
 });
 
 // POST Route for a new UX/UI comment
-comments.post("/", (req, res) => {
+comments.post("/:id", (req, res) => {
+  const project_id = req.params.id;
+
   console.log(req.body);
 
   const { name, comment } = req.body;
@@ -36,10 +39,14 @@ comments.post("/", (req, res) => {
     const newcomment = {
       name,
       comment,
+      project_id,
       comment_id: uuidv4(),
     };
 
     readAndAppend(newcomment, "./seeds/commentsData.json");
+    res.json("Comment created.");
+  } else {
+    res.error("Error adding comment.");
   }
 });
 
