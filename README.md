@@ -1,14 +1,10 @@
-# 14 Model-View-Controller (MVC): Tech Blog
+# 14 Model-View-Controller (MVC): TechVlog
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
 The purpose of this app is to create a CMS-style blog site that allows publish articles, blog posts and comments.
-
-Aceptance Criteria:
-- Home page which includes exiting blogs (if any).
-- Navigation links for homepage, dashboard and option 
 
 ## Acceptance Criteria
 
@@ -50,11 +46,15 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Usage
 
+Demo app:
+
+![demo](./docs/img1.png)
+
+![demo](./docs/img2.png)
+
 The following animation demonstrates the application functionality:
 
-![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./docs/14-mvc-homework-demo-01.gif) 
-
-
+![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./docs/14-mvc-homework-demo-01.gif)
 
 ## Credits
 
