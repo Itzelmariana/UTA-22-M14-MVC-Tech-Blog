@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-auto">
+      <h2 class="mt-5 titleHomepage">Welcome, {{name}}!</h2>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3 class="subtitles">Create a New Post:</h3>
+
+      <form class="form new-project-form">
+        <div class="form-group">
+          <input
+            for="project-name"
+            placeholder="Name"
+            class="form-input"
+            type="text"
+            id="project-name"
+            name="project-name"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            placeholder="Description"
+            for="project-desc"
+            class="form-input"
+            id="project-desc"
+            name="project-desc"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary projectBtn">Post</button>
+        </div>
+      </form>
+    </div>
+
+    {{#if projects.length}}
+      <div class="col-md-6 project-list">
+        <h3 class="subtitles">Current Posts:</h3>
+
+        {{#each projects as |project|}}
+          <div class="row mb-2">
+            <div class="col-md-8">
+              <h4 class="posts"><a
+                  href="/post/{{project.id}}"
+                >{{project.name}}</a></h4>
+            </div>
+            <div class="col-md-4">
+              <button
+                class="btn btn-sm btn-danger"
+                data-id="{{project.id}}"
+              >DELETE</button>
+            </div>
+
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</div>
+
+<script src="./js/profile.js"></script>

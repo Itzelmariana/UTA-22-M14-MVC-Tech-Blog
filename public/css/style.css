@@ -1,0 +1,75 @@
+:root {
+  --primary-color: #1f2937;
+}
+/* Navbar styles*/
+.logo {
+  color: white;
+  font-size: 25px;
+}
+.logo span {
+  color: aqua;
+}
+nav {
+  font-size: 25px !important;
+}
+nav a {
+  text-decoration: none !important;
+  font-size: 15px !important;
+}
+
+/* Homepage styles*/
+.titleHomepage {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.cardHomepage {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+.postTitle {
+  background-color: var(--primary-color);
+  padding: 12px;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+.postTitle a:hover {
+  color: aqua;
+  text-decoration: none;
+}
+.postDate p,
+.createdProject {
+  text-align: right;
+  font-size: 15px !important;
+}
+
+/* Project id page */
+.projectId {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+.projectBtn {
+  color: var(--primary-color);
+}
+.projectBtn:hover {
+  color: aqua;
+}
+
+/* profile/dashboard page*/
+
+.subtitles {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+.posts {
+  background-color: rgb(106, 201, 220);
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+.posts a:hover {
+  text-decoration: none;
+  color: rgb(70, 68, 68);
+}

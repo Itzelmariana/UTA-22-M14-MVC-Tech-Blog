@@ -4,8 +4,11 @@
 
 ## Description
 
-The purpose of this app is to create a CMS-style blog site that allows 
-publish articles, blog posts and comments
+The purpose of this app is to create a CMS-style blog site that allows publish articles, blog posts and comments.
+
+Aceptance Criteria:
+- Home page which includes exiting blogs (if any).
+- Navigation links for homepage, dashboard and option 
 
 ## Acceptance Criteria
 

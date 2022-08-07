@@ -1,0 +1,17 @@
+[
+  {
+    "name": "MVC",
+    "description": "MVC (Model-View-Controller) is a pattern in software design commonly used to implement user interfaces, data, and controlling logic."
+   
+  },
+  {
+    "name": "OOP",
+    "description": "Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic."
+   
+  },
+  {
+    "name": "ORM",
+    "description": "Object–relational mapping in computer science is a programming technique for converting data between type systems using object-oriented programming languages. "
+  
+  }
+]
