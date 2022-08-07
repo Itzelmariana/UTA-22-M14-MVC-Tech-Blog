@@ -81,6 +81,25 @@ nav a {
   text-decoration: none;
   color: rgb(70, 68, 68);
 }
+
+/* projectID page*/
+.customizedForm {
+  padding: 20px;
+  background-color: rgb(106, 201, 220, 0.3);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Comment Page */
+.commentCards,
+.commentCardUser {
+  border-radius: 10px !important;
+}
+
+.commentCardUser {
+  padding: 15px !important;
+}
+
 @media (max-width: 550px) {
   .myhome {
     display: none;
@@ -93,12 +112,4 @@ nav a {
     padding-left: 50px;
     padding-right: 50px;
   }
-}
-
-/* projectID page*/
-.customizedForm {
-  padding: 20px;
-  background-color: rgb(106, 201, 220, 0.3);
-  border-radius: 10px;
-  margin-top: 15px;
 }

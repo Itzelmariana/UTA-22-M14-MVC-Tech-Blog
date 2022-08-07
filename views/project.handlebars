@@ -9,18 +9,25 @@
       {{format_date date_created}}</p>
   </div>
 
-  <button class="btn btn-primary mt-10 projectBtn"> Add comment</button>
+  <button class="btn btn-primary mt-10 projectBtn addCommentBtn" type="submit">
+    Add comment</button>
   {{#if logged_in}}
-    <button class="btn btn-primary mt-10 projectBtn"> Modify Post </button>
+    <button
+      class="btn btn-primary mt-10 projectBtn modifyPostBtn"
+      type="button"
+      modif-id="{{project.id}}"
+    >
+      Modify Post
+    </button>
   {{/if}}
-  <form class="row customizedForm">
+  <form class="row customizedForm" id="customizedForm">
     <div class="col-12">
       <input
-        name="tipUsername"
-        id="tipUsername"
+        name="commentUsername"
+        id="commentUsername"
         placeholder="Add your name"
         value=""
-        class="form-input"
+        class="form-input w-100"
       />
     </div>
     <div class="col-12">
@@ -28,11 +35,15 @@
         placeholder="Leave a comment"
         for="post-comment"
         class="form-input"
-        id="post-comment"
+        id="commentText"
         name="post-comment"
         class="form-input w-100"
       ></textarea>
 
     </div>
   </form>
+
+  <section class="comments" id="comment-container"></section>
 </div>
+
+<script src="/js/index.js"></script>
