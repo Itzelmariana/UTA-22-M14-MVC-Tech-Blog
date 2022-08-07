@@ -46,6 +46,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ## Usage
 
+Deployed website located at [link](https://techvlog.herokuapp.com/)
+
 Demo app:
 
 ![demo](./docs/img1.png)
