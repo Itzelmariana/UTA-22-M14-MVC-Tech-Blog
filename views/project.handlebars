@@ -25,31 +25,31 @@
     >
       Modify Post
     </button>
-  {{/if}}
-  <form class="row customizedForm" id="customizedForm">
-    <div class="col-12">
-      <input
-        name="commentUsername"
-        id="commentUsername"
-        placeholder="Add your name"
-        value=""
-        class="form-input w-100"
-      />
-    </div>
-    <div class="col-12">
-      <textarea
-        placeholder="Leave a comment"
-        for="post-comment"
-        class="form-input"
-        id="commentText"
-        name="post-comment"
-        class="form-input w-100"
-      ></textarea>
-      <button class="btn btn-primary projectBtn addCommentBtn" type="submit">
-        Add comment</button>
-    </div>
-  </form>
 
+    <form class="row customizedForm" id="customizedForm">
+      <div class="col-12">
+        <input
+          name="commentUsername"
+          id="commentUsername"
+          placeholder="Add your name"
+          value=""
+          class="form-input w-100"
+        />
+      </div>
+      <div class="col-12">
+        <textarea
+          placeholder="Leave a comment"
+          for="post-comment"
+          class="form-input"
+          id="commentText"
+          name="post-comment"
+          class="form-input w-100"
+        ></textarea>
+        <button class="btn btn-primary projectBtn addCommentBtn" type="submit">
+          Add comment</button>
+      </div>
+    </form>
+  {{/if}}
   <section class="comments" id="comment-container"></section>
 </div>
 
