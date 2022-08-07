@@ -1,24 +1,21 @@
 const modifButtonHandler = async (event) => {
+  console.log(event);
   if (event.target.hasAttribute("modif-id")) {
     const id = event.target.getAttribute("modif-id");
+    const name = document.getElementById("projectName").innerText;
+    const description = document.getElementById("projectDescription").innerText;
 
-    const response = await fetch(`/api/project/${id}`, {
-      method: "POST",
+    const response = await fetch(`/api/projects/${id}`, {
+      method: "PUT",
       body: JSON.stringify({ name, description }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
-    if (response.ok) {
-      document.location.replace("/project");
-    } else {
-      alert("Failed to delete project");
-    }
   }
 };
 document
-  .querySelector(".projectId")
+  .querySelector(".modifyPostBtn")
   .addEventListener("click", modifButtonHandler);
 
 const commentForm = document.getElementById("customizedForm");
